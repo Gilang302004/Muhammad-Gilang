@@ -1,0 +1,76 @@
+/* Tabel */
+/* Mengatur desain judul halaman dengan border di bawah */
+.judul {
+    color: #444;
+    border-bottom: 2px solid #038ade; /* Mengubah warna border agar sesuai dengan tema */
+    padding-bottom: 15px;
+    font-size: 24px; /* Menambah ukuran font agar lebih menarik */
+    text-align: center; /* Mengatur teks judul di tengah */
+}
+
+/* Mengatur agar lebar tabel penuh dan antara border tidak memiliki jarak */
+.table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan pada tabel */
+    border-radius: 8px; /* Membuat sudut tabel menjadi melengkung */
+    overflow: hidden; /* Menyembunyikan elemen yang keluar dari tabel */
+}
+
+/* Menambahkan border dan padding pada sel tabel */
+.table th, .table td {
+    border: 1px solid #ddd; /* Mengubah warna border agar lebih lembut */
+    padding: 15px;
+    text-align: center; /* Mengatur teks menjadi rata tengah */
+    font-size: 14px;
+}
+
+/* Mengatur background dan desain header tabel */
+.table th {
+    background: #280872; /* Menggunakan warna utama untuk header */
+    color: #fff; /* Mengubah warna teks header menjadi putih */
+    text-transform: uppercase; /* Mengubah teks header menjadi huruf kapital */
+    letter-spacing: 1px; /* Menambahkan spasi antar huruf */
+}
+
+/* Efek hover pada baris tabel untuk memberikan interaksi visual */
+.table tr:hover {
+    background-color: #f1f1f1; /* Mengubah warna latar belakang saat di-hover */
+}
+
+/* Mengatur desain tombol yang dibuat dengan tag <a> */
+.tombol {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    background: #038ade; /* Menggunakan warna biru untuk tombol utama */
+    border-radius: 5px; /* Menambahkan sudut melengkung pada tombol */
+    transition: background 0.3s, transform 0.2s; /* Menambahkan efek transisi */
+}
+
+/* Efek hover pada tombol agar lebih interaktif */
+.tombol:hover {
+    background: #026cbf; /* Menggelapkan warna tombol saat di-hover */
+    transform: translateY(-2px); /* Memberikan efek mengangkat saat di-hover */
+}
+
+/* Desain tombol edit dan hapus agar lebih kecil dan berbeda */
+.tombol.edit, .tombol.hapus {
+    padding: 8px 15px;
+    font-size: 12px;
+    border-radius: 3px; /* Membuat sudut melengkung pada tombol edit dan hapus */
+}
+
+/* Mengatur desain tombol hapus */
+.tombol.hapus {
+    background: #fc4c4c; /* Menggunakan warna merah untuk tombol hapus */
+    transition: background 0.3s, transform 0.2s; /* Menambahkan efek transisi */
+}
+
+/* Efek hover pada tombol hapus agar lebih interaktif */
+.tombol.hapus:hover {
+    background: #e43b3b; /* Menggelapkan warna tombol hapus saat di-hover */
+    transform: translateY(-2px); /* Memberikan efek mengangkat saat di-hover */
+}

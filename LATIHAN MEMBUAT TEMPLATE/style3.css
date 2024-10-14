@@ -1,0 +1,80 @@
+/* Layout */
+/* Mengatur desain header */
+header {
+    background: #280872;
+    color: #fff;
+    padding: 15px 20px;
+    font-size: 24px; /* Menambah ukuran font untuk header */
+    text-align: center; /* Mengatur teks agar berada di tengah */
+    letter-spacing: 1px; /* Menambahkan jarak antar huruf */
+}
+
+/* Mengatur lebar menu 20% dengan background hitam dan efek border */
+aside {
+    flex: 20%;
+    background: #222;
+    border-radius: 0 15px 15px 0; /* Menambahkan border radius agar sudut menu melengkung */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3); /* Menambahkan bayangan untuk efek 3D */
+    border: 2px solid #444; /* Menambahkan border pada sidebar */
+    border-image: linear-gradient(180deg, #444, #888); /* Menggunakan border dengan efek gradient */
+    border-image-slice: 1; /* Membuat border menggunakan gradient */
+}
+
+/* Mengatur lebar konten utama 80% dengan background putih */
+section.main {
+    flex: 80%;
+    background: #fff;
+    min-height: 530px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan pada konten utama */
+    border-radius: 10px; /* Membuat sudut konten utama menjadi melengkung */
+    border: 1px solid #ddd; /* Menambahkan border halus pada konten utama */
+}
+
+/* Mengatur footer dengan background abu-abu dan teks di tengah */
+footer {
+    background: #ccc;
+    color: #555;
+    padding: 15px;
+    text-align: center;
+    border-top: 3px solid #aaa; /* Menambahkan garis pembatas atas pada footer untuk tampilan lebih jelas */
+    font-size: 14px; /* Mengatur ukuran font agar lebih kecil dan rapi */
+}
+
+/* Mengatur layout pada layar kecil (responsive) */
+@media (max-width: 700px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+/* Navigasi */
+/* Membuang padding tag <ul> */
+.menu {
+    padding: 0;
+    margin: 0; /* Menghilangkan margin agar tampilan lebih rapi */
+}
+
+/* Menambah border bawah tag <li> dengan gaya lebih elegan */
+.menu li {
+    border-bottom: 1px dashed #666; /* Menggunakan garis putus-putus agar terlihat lebih modern */
+}
+
+/* Mengatur desain menu yang dibuat dengan tag a */
+.menu a {
+    display: block;
+    padding: 15px 20px; /* Mengurangi padding untuk memperbaiki tampilan */
+    list-style: none;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s; /* Menambahkan transisi agar lebih halus saat hover */
+    border-radius: 5px; /* Menambahkan border radius untuk membulatkan sudut menu */
+}
+
+/* Mengganti background menu ketika ditunjuk mouse */
+.menu a:hover {
+    background: #444; /* Mengubah warna latar belakang saat hover menjadi lebih kontras */
+    color: #ffcc00; /* Mengubah warna teks saat hover */
+    border: 1px solid #ffcc00; /* Menambahkan border dengan warna kuning saat hover */
+}

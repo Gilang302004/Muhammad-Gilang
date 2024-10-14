@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Mengatur font yang dipakai dan background halaman */
+body {
+    font-family: 'Verdana', sans-serif; /* Mengganti font menjadi Verdana */
+    margin: 0;
+    background: #280872; /* Mempertahankan warna latar belakang */
+}
+
+/* Membuat Container menjadi layout flexbox dan kotak login di tengah */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Menyelaraskan elemen secara vertikal */
+    min-height: 100vh; /* Memastikan container selalu setinggi viewport */
+}
+
+/* Mengatur kotak form login dengan lebar dan style lebih modern */
+.login-box {
+    width: 350px; /* Lebar yang pas untuk tampilan yang lebih kompak */
+    background: #fff; /* Warna background putih tetap dipertahankan */
+    padding: 30px; /* Padding lebih besar untuk tampilan lebih lapang */
+    border: 2px solid #ddd; /* Border sedikit lebih tebal */
+    border-radius: 12px; /* Membulatkan sudut kotak login lebih banyak */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Menambahkan sedikit bayangan */
+}
+
+/* Mengatur judul form dengan style baru */
+.login-box h2 {
+    color: #333; /* Warna teks yang lebih gelap */
+    text-align: center;
+    padding-bottom: 15px; /* Mengurangi padding bawah */
+    margin: 0 0 20px;
+    font-size: 22px; /* Ukuran font sedikit lebih kecil */
+    font-weight: bold; /* Menambahkan ketebalan pada teks */
+}
+
+/* Mengatur agar tag input dan select lebih modern */
+input, select {
+    width: 100%;
+    padding: 14px; /* Mengatur padding yang lebih seragam */
+    margin: 10px 0;
+    border: 2px solid #ccc; /* Border lebih tebal untuk input field */
+    border-radius: 8px; /* Membulatkan sudut input lebih banyak */
+    font-size: 14px; /* Ukuran font sedikit lebih besar untuk kemudahan baca */
+}
+
+input:focus, select:focus {
+    border-color: #280872; /* Menambahkan efek border biru saat fokus */
+    outline: none; /* Menghilangkan outline bawaan */
+    box-shadow: 0 0 5px rgba(40, 8, 114, 0.5); /* Menambahkan efek bayangan saat fokus */
+}
+
+/* Mengatur tampilan tombol submit agar lebih menarik */
+input[type=submit] {
+    background-color: #280872; /* Mempertahankan warna tombol biru tua */
+    border: none;
+    color: #fff;
+    padding: 14px; /* Padding yang lebih besar */
+    cursor: pointer;
+    border-radius: 8px; /* Membulatkan sudut tombol lebih banyak */
+    font-weight: bold; /* Membuat teks tombol lebih tebal */
+    transition: background-color 0.3s ease; /* Transisi halus pada warna tombol */
+}
+
+input[type=submit]:hover {
+    background-color: #3b3b98; /* Mengubah warna tombol saat di-hover menjadi lebih terang */
+}

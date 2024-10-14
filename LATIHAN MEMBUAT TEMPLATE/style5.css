@@ -1,0 +1,88 @@
+/* Halaman Form */
+/* Mengatur form-group agar memiliki tata letak yang lebih rapi */
+.form-group {
+    clear: both;
+    margin-bottom: 20px; /* Menambah jarak antar grup form */
+    overflow: hidden; /* Menghindari elemen yang meluap */
+}
+
+/* Mengatur label agar lebih elegan dengan gaya yang lebih menonjol */
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #444; /* Mengubah warna teks label agar lebih kontras */
+}
+
+/* Mengatur input dan elemen form agar lebih responsif dan rapi */
+.form-group .input {
+    display: block;
+    width: 100%;
+}
+
+.form-group .input input, 
+.form-group .input select {
+    width: 100%;
+    padding: 12px 15px; /* Memberikan padding yang lebih besar */
+    margin-top: 5px;
+    border: 1px solid #ddd; /* Mengubah warna border */
+    border-radius: 5px; /* Menambahkan sudut melengkung */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Menambahkan sedikit bayangan */
+    transition: border 0.3s, box-shadow 0.3s; /* Menambahkan transisi */
+}
+
+/* Efek hover dan fokus pada input */
+.form-group .input input:focus, 
+.form-group .input select:focus {
+    border-color: #038ade; /* Mengubah warna border saat fokus */
+    box-shadow: 0 0 5px rgba(3, 138, 222, 0.5); /* Menambahkan bayangan saat fokus */
+}
+
+/* Mengatur input radio agar lebih rapi */
+input[type=radio] {
+    width: auto; /* Mengatur ukuran radio button lebih kecil */
+    margin-right: 8px; /* Memberikan jarak antara radio button dan label */
+}
+
+/* Mengatur tombol simpan dan reset agar lebih menarik */
+.tombol.simpan, .tombol.reset {
+    padding: 10px 20px; /* Menambah padding untuk kenyamanan */
+    color: #fff; /* Mengubah warna teks menjadi putih */
+    border: none; /* Menghapus border default */
+    border-radius: 5px; /* Membuat sudut melengkung */
+    cursor: pointer; /* Menambahkan pointer saat hover */
+    transition: background 0.3s, transform 0.2s; /* Menambahkan transisi */
+}
+
+/* Warna tombol simpan */
+.tombol.simpan {
+    background: #038ade;
+}
+
+.tombol.simpan:hover {
+    background: #026cbf; /* Mengubah warna tombol saat di-hover */
+    transform: translateY(-2px); /* Efek mengangkat saat di-hover */
+}
+
+/* Warna tombol reset */
+.tombol.reset {
+    background: #fb8307;
+}
+
+.tombol.reset:hover {
+    background: #e57205; /* Mengubah warna tombol saat di-hover */
+    transform: translateY(-2px); /* Efek mengangkat saat di-hover */
+}
+
+/* Tampilan responsif untuk layar kecil */
+@media (max-width: 700px) {
+    .form-group label, 
+    .form-group .input {
+        width: 100%; /* Memastikan elemen form menumpuk pada layar kecil */
+    }
+
+    .form-group .input input, 
+    .form-group .input select {
+        margin-top: 10px; /* Memberikan jarak antara label dan input */
+    }
+}

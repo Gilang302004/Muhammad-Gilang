@@ -1,0 +1,116 @@
+/* Gaya umum untuk seluruh halaman */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f7; 
+}
+
+header {
+    background-color: #280872; 
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: sticky; /* Membuat header tetap di atas saat halaman digulir */
+    top: 0;
+    z-index: 10;
+}
+
+/* Mengatur ulang navigasi */
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Menu menjadi rata tengah */
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px; /* Mengubah jarak antar menu */
+    border-right: 1px solid #ddd; /* Mengubah garis pembatas */
+    padding-right: 15px;
+}
+
+header nav ul li:last-child {
+    border-right: none; /* Menghapus garis pada elemen terakhir */
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.3s, color 0.3s; /* Menambahkan transisi */
+}
+
+header nav ul li a:hover {
+    font-weight: bold;
+    color: #ffcc00; /* Mengubah warna saat hover */
+    transform: scale(1.1); /* Menambahkan sedikit efek memperbesar saat hover */
+}
+
+/* Pengaturan untuk section */
+section {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #fafafa; /* Mengatur latar belakang yang berbeda */
+}
+
+/* Mengatur layout container untuk konten tengah */
+.container {
+    max-width: 1000px; /* Memperluas ukuran container */
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Mengubah ke grid layout */
+    gap: 20px; /* Menambahkan jarak antar elemen */
+}
+
+/* Gaya baru untuk item menu */
+.menu-item img {
+    max-width: 80%; /* Memperbesar gambar */
+    height: auto;
+    border-radius: 12px; /* Membuat gambar lebih bulat */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Menambahkan bayangan pada gambar */
+    transition: transform 0.2s ease-in-out; /* Menambahkan animasi hover */
+}
+
+.menu-item img:hover {
+    transform: scale(1.05); /* Sedikit memperbesar gambar saat di-hover */
+}
+
+/* Section hours */
+#hours {
+    background-color: #e0e0e0; /* Mengubah warna latar belakang */
+    padding: 50px 20px; /* Menambahkan padding samping */
+}
+
+#hours p {
+    font-size: 18px;
+    margin: 5px 0;
+    text-align: left; /* Mengubah alignment teks */
+}
+
+/* Footer style baru */
+footer {
+    background-color: #333399; /* Mengubah warna latar belakang */
+    color: #fff;
+    text-align: center;
+    padding: 15px 0; /* Memperluas padding */
+    width: 100%;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan atas */
+    font-size: 14px;
+}
+
+/* Responsif untuk layar kecil */
+@media screen and (max-width: 768px) {
+    header nav ul {
+        flex-direction: column; /* Menyusun menu vertikal pada layar kecil */
+    }
+
+    header nav ul li {
+        margin: 10px 0; /* Menambahkan margin vertikal pada menu */
+    }
+
+    .container {
+        padding: 0 10px; /* Mengurangi padding di layar kecil */
+    }
+}
