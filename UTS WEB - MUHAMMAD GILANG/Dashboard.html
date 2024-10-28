@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Barbershop</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="hero">
+        <div class="overlay">
+            <h1>Dashboard Barbershop Gig's</h1>
+        </div>
+    </header>
+
+    <!-- Konten Dashboard -->
+    <main>
+        <div class="dashboard-container">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <h2>Menu</h2>
+                <ul>
+                    <li><a href="#overview">Ikhtisar</a></li>
+                    <li><a href="#appointments">Pengelolaan Pemesanan</a></li>
+                    <li><a href="#reports">Statistik dan Laporan</a></li>
+                    <li><a href="#staff-management">Pengelolaan Staf</a></li>
+                    <li><a href="#promotions">Promosi dan Pemasaran</a></li>
+                    <li><a href="#settings">Pengaturan Layanan</a></li>
+                    <li><a href="#feedback">Ulasan dan Feedback</a></li>
+                    <li><a href="#payments">Integrasi Pembayaran</a></li>
+                </ul>
+            </aside>
+
+            <!-- Konten Utama -->
+            <div class="main-content">
+                <section id="overview">
+                    <h2>Ikhtisar</h2>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3>Total Pelanggan</h3>
+                            <p>150</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>Janji Temu Hari Ini</h3>
+                            <p>10</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>Pendapatan Bulan Ini</h3>
+                            <p>Rp 5.000.000</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="appointments">
+                    <h2>Pengelolaan Pemesanan</h2>
+                    <button onclick="document.getElementById('add-appointment-form').style.display='block'">Tambah Janji Temu</button>
+                    <div id="add-appointment-form" style="display:none;">
+                        <h3>Form Tambah Janji Temu</h3>
+                        <form>
+                            <label>Nama Pelanggan:</label><br>
+                            <input type="text" required><br>
+                            <label>Tanggal:</label><br>
+                            <input type="date" required><br>
+                            <label>Waktu:</label><br>
+                            <input type="time" required><br>
+                            <label>Layanan:</label><br>
+                            <select>
+                                <option>Potongan Rambut</option>
+                                <option>Pencukuran</option>
+                                <option>Perawatan Jenggot</option>
+                            </select><br>
+                            <button type="submit">Simpan</button>
+                            <button type="button" onclick="document.getElementById('add-appointment-form').style.display='none'">Batal</button>
+                        </form>
+                    </div>
+                    <table class="appointments-table">
+                        <thead>
+                            <tr>
+                                <th>Nama</th>
+                                <th>Tanggal</th>
+                                <th>Waktu</th>
+                                <th>Layanan</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ary</td>
+                                <td>26 Okt 2024</td>
+                                <td>10:00</td>
+                                <td>Potongan Rambut</td>
+                                <td><button>Edit</button> <button>Hapus</button></td>
+                            </tr>
+                            <tr>
+                                <td>Gilang</td>
+                                <td>26 Okt 2024</td>
+                                <td>11:00</td>
+                                <td>Pencukuran</td>
+                                <td><button>Edit</button> <button>Hapus</button></td>
+                            </tr>
+                            <tr>
+                                <td>Taufik</td>
+                                <td>26 Okt 2024</td>
+                                <td>12:00</td>
+                                <td>Perawatan Jenggot</td>
+                                <td><button>Edit</button> <button>Hapus</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section id="reports">
+                    <h2>Statistik dan Laporan</h2>
+                    <p>Laporan penjualan harian, mingguan, atau bulanan akan ditampilkan di sini.</p>
+                    <button>Lihat Laporan</button>
+                </section>
+
+                <section id="staff-management">
+                    <h2>Pengelolaan Staf</h2>
+                    <button onclick="document.getElementById('add-staff-form').style.display='block'">Tambah Staf</button>
+                    <div id="add-staff-form" style="display:none;">
+                        <h3>Form Tambah Staf</h3>
+                        <form>
+                            <label>Nama Staf:</label><br>
+                            <input type="text" required><br>
+                            <label>Jadwal Kerja:</label><br>
+                            <input type="text" required><br>
+                            <button type="submit">Simpan</button>
+                            <button type="button" onclick="document.getElementById('add-staff-form').style.display='none'">Batal</button>
+                        </form>
+                    </div>
+                    <table class="staff-table">
+                        <thead>
+                            <tr>
+                                <th>Nama</th>
+                                <th>Jadwal Kerja</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Wahid</td>
+                                <td>Senin - Jumat</td>
+                            </tr>
+                            <tr>
+                                <td>Maryam</td>
+                                <td>Senin - Sabtu</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section id="promotions">
+                    <h2>Promosi dan Pemasaran</h2>
+                    <button onclick="document.getElementById('add-promotion-form').style.display='block'">Tambah Promosi</button>
+                    <div id="add-promotion-form" style="display:none;">
+                        <h3>Form Tambah Promosi</h3>
+                        <form>
+                            <label>Nama Promosi:</label><br>
+                            <input type="text" required><br>
+                            <label>Diskon:</label><br>
+                            <input type="text" required placeholder="Misal: 20%"><br>
+                            <button type="submit">Simpan</button>
+                            <button type="button" onclick="document.getElementById('add-promotion-form').style.display='none'">Batal</button>
+                        </form>
+                    </div>
+                    <table class="promotions-table">
+                        <thead>
+                            <tr>
+                                <th>Nama Promosi</th>
+                                <th>Diskon</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Promo Akhir Pekan</td>
+                                <td>20%</td>
+                                <td><button>Edit</button> <button>Hapus</button></td>
+                            </tr>
+                            <tr>
+                                <td>Diskon Pelanggan Baru</td>
+                                <td>15%</td>
+                                <td><button>Edit</button> <button>Hapus</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section id="settings">
+                    <h2>Pengaturan Layanan</h2>
+                    <p>Menambahkan, mengedit, atau menghapus layanan yang ditawarkan.</p>
+                    <table class="services-table">
+                        <thead>
+                            <tr>
+                                <th>Nama Layanan</th>
+                                <th>Harga</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Potongan Rambut</td>
+                                <td>Rp 50.000</td>
+                                <td><button>Edit</button> <button>Hapus</button></td>
+                            </tr>
+                            <tr>
+                                <td>Pencukuran</td>
+                                <td>Rp 30.000</td>
+                                <td><button>Edit</button> <button>Hapus</button></td>
+                            </tr>
+                            <tr>
+                                <td>Perawatan Jenggot</td>
+                                <td>Rp 40.000</td>
+                                <td><button>Edit</button> <button>Hapus</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section id="feedback">
+                    <h2>Ulasan dan Feedback</h2>
+                    <p>Mengelola ulasan pelanggan dan menyimpan feedback.</p>
+                    <table class="feedback-table">
+                        <thead>
+                            <tr>
+                                <th>Nama Pelanggan</th>
+                                <th>Ulasan</th>
+                                <th>Tanggal</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ary</td>
+                                <td>Sangat puas dengan layanan!</td>
+                                <td>26 Okt 2024</td>
+                                <td><button>Hapus</button></td>
+                            </tr>
+                            <tr>
+                                <td>Taufik</td>
+                                <td>Pelayanan cepat dan ramah.</td>
+                                <td>26 Okt 2024</td>
+                                <td><button>Hapus</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section id="payments">
+                    <h2>Integrasi Pembayaran</h2>
+                    <p>Sistem pembayaran online untuk memudahkan transaksi.</p>
+                    <button onclick="alert('Integrasi pembayaran akan segera tersedia.')">Cek Integrasi Pembayaran</button>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Barbershop Gig's</p>
+    </footer>
+</body>
+</html>
